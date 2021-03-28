@@ -32,10 +32,10 @@
         </nav>
       </div>
     </header>
-    <main>
-      <form class="questionnaires" method="get" action="https://echo.htmlacademy.ru">
+    <main class="page-main">
+      <form class="questionnaires" method="post" action="https://echo.htmlacademy.ru">
         <div class="questionnaires__header container">
-          <h1 class="title">Подбор программы</h1>
+          <h1 class="title title--main">Подбор программы</h1>
           <p class="questionnaires__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
         <section class="specification questionnaires__item">
@@ -80,7 +80,7 @@
         </section>
         <section class="contact-details questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <legend class="questionnaires__legend"><span class="questionnaires__title">Контактные данные (владельца кота)</span></legend>
+            <legend class="title-wrapper"><span class="title">Контактные данные (владельца кота)</span></legend>
             <div class="container">
               <ul class="contact-details__list" role="none">
                 <li class="contact-details__item">
@@ -96,14 +96,14 @@
           </fieldset>
         </section>
         <section class="comment questionnaires__item">
-            <div class="questionnaires__legend"><label class="questionnaires__title" for="comment">Комментарий</label></div>
+            <div class="title-wrapper"><label class="title" for="comment">Комментарий</label></div>
             <div class="container">
               <textarea class="questionnaires__input comment__textarea" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
         </section>
         <section class="additionally questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <legend class="questionnaires__legend"><span class="questionnaires__title">Дополнительно</span></legend>
+            <legend class="title-wrapper"><span class="title">Дополнительно</span></legend>
             <div class="container">
               <ul class="additionally__list" role="none">
                 <li class="additionally__item">
@@ -134,7 +134,7 @@
     </main>
     <footer class="page-footer">
       <div class="address page-footer__addres">
-        <div class="address__wrapper address__wrapper--form">
+        <div class="address__wrapper">
           <div class="container">
             <p class="address__title">приглашаем к сотрудничеству дилеров!</p>
             <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
