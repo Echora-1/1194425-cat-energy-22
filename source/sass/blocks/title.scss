@@ -1,0 +1,17 @@
+.title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  &--main {
+    @media (max-width: $mobile-width-only) {
+      line-height: 36px;
+      color: $white;
+    }
+  }
+}

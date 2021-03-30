@@ -1,0 +1,49 @@
+.description {
+  min-height: 300px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 600px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 300px;
+  }
+}
+
+.description__list {
+  list-style: none;
+}
+
+.description__icon {
+  width: 60px;
+  height: 60px;
+  background-color: $apple;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--leaf {
+    background-image: url("../img/icon_leaf.svg");
+  }
+
+  &--tub {
+    background-image: url("../img/icon_tub.svg");
+  }
+
+  &--eat {
+    background-image: url("../img/icon_eat.svg");
+  }
+
+  &--alarm {
+    background-image: url("../img/icon_alarm.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.description__text {
+  font-family: "Arial", sans-serif;
+  color: $special_dark-grey;
+}

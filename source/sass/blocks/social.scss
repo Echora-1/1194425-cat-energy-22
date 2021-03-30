@@ -1,0 +1,32 @@
+.socila__link {
+  background-color: $special_grey-2;
+  display: block;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &:hover {
+    background-color: $apple;
+  }
+
+  &:active {
+    background-color: rgba($apple, 0.3);
+  }
+
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+    mask-image: url("../img/icon_vkontakte.svg");
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+    mask-image: url("../img/icon_instagram.svg");
+  }
+
+  &--facebook {
+    width: 22px;
+    height: 22px;
+    mask-image: url("../img/icon_facebook.svg");
+  }
+}

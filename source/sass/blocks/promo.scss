@@ -1,0 +1,20 @@
+.promo {
+  min-height: 480px;
+  background:
+    url("../img/index-can-mobile.png") no-repeat center 167px,
+    linear-gradient(to bottom, rgba($apple, 0.85) 63%, $white 63%),
+    url("../img/index-background-desktop.png") no-repeat center 0;
+
+  @media (min-width: $tablet-width) {
+    min-height: 840px;
+    background: url("../img/index-can-tablet.png") no-repeat center 231px, $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 600px;
+    background:
+      url("../img/index-can.png") no-repeat 60% center,
+      linear-gradient(to left, rgba($apple, 0.85) 50%, $white 50%),
+      url("../img/index-background-desktop.jpg") no-repeat right top;
+  }
+}
