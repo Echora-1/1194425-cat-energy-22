@@ -1,0 +1,37 @@
+.address {
+  min-height: 114px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 201px;
+  }
+}
+
+.address__title {
+  font-size: 16px;
+  line-height: 18px;
+  color: $cod_gray;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.address__wrapper {
+  &--index {
+    background-color: $white;
+  }
+}
+
+.address__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

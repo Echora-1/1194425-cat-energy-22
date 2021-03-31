@@ -1,0 +1,23 @@
+.button {
+  text-transform: uppercase;
+  background-color: $apple;
+  width: 280px;
+  min-height: 40px;
+  display: inline-block;
+  text-align: center;
+  padding: 11px 22px;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: $basic_green;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+}

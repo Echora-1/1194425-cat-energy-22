@@ -1,0 +1,30 @@
+.example {
+  background: $gallery;
+  min-height: 705px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1040px;
+    background: linear-gradient(to top, $gallery 45%, $white 45%);
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 665px;
+    background: linear-gradient(to top, $gallery 70%, $white 70%);
+  }
+}
+
+.example__text {
+  font-family: "Arial", sans-serif;
+  color: $special_dark-grey;
+}
+
+.example__price {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
