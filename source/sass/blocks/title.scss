@@ -1,17 +1,40 @@
 .title {
-  font-size: 36px;
-  line-height: 40px;
   font-weight: 400;
-
-  @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
-  }
+  color: $black;
 
   &--main {
+    font-size: 36px;
+    line-height: 36px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &--main-index {
     @media (max-width: $mobile-width-only) {
-      line-height: 36px;
       color: $white;
+    }
+  }
+
+  &--index {
+    font-size: 36px;
+    line-height: 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &--form {
+    font-size: 24px;
+    line-height: 26px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
     }
   }
 }

@@ -10,9 +10,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: rgba($apple, 0.85);
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      background-color: rgba($apple, 0.85);
+    }
   }
 }
 
@@ -23,7 +28,9 @@
 .main-nav__item {
   &--current {
     border-bottom: 2px solid $apple;
+  }
 
+  &--current-index {
     @media (min-width: $desktop-width) {
       border-bottom: 2px solid $white;
     }
@@ -33,8 +40,10 @@
 .main-nav__link {
   color: $black;
 
-  @media (min-width: $desktop-width) {
-    color: $white;
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
   }
 
   &:hover {

@@ -2,9 +2,15 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px dotted rgba($black, 0.4);
+  }
+
+  &:hover {
+    border-bottom: 1px solid rgba($black, 0.4);
   }
 }

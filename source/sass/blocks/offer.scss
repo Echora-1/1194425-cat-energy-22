@@ -5,8 +5,42 @@
 .offer__icon {
   width: 100px;
   height: 100px;
-  text-align: center;
-  background-image: radial-gradient(circle closest-corner at 50% 50%, $apple 35%, transparent 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    height: 215px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 140px;
+    height: 110px;
+  }
+
+  &--slim {
+    background-image: url("../img/cat_back-slim.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/cat_back-slim--tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/cat_back-slim--desktop.svg");
+    }
+  }
+
+  &--pro {
+    background-image: url("../img/cat_back-pro.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/cat_back-pro--tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/cat_back-pro--desktop.svg");
+    }
+  }
 }
 
 .offer__title {

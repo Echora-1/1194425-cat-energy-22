@@ -11,10 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 600px;
-    background:
-      url("../img/index-can.png") no-repeat 60% center,
-      linear-gradient(to left, rgba($apple, 0.85) 50%, $white 50%),
-      url("../img/index-background-desktop.jpg") no-repeat right top;
+    min-height: 500px;
+    background: url("../img/index-can.png") no-repeat 60% center;
   }
 }

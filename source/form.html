@@ -12,7 +12,7 @@
         <a class="logo page-header__logo" href="./index.html">
           <img src="./img/logo-mobile.svg" width="34" height="38"  alt="">
         </a>
-        <a class="text-logo page-header__text-logo" href="./index.html">
+        <a class="logo logo--text page-header__logo page-header__logo--text" href="./index.html">
           <img src="./img/text-logo.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <nav class="main-nav page-header__main-nav">
@@ -20,13 +20,13 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="./index.html">главная</a>
+                <a class="main-nav__link" href="./index.html">главная</a>
               </li>
               <li class="main-nav__item">
-                <a href="./catalog.html">каталог продукции</a>
+                <a class="main-nav__link" href="./catalog.html">каталог продукции</a>
               </li>
               <li class="main-nav__item main-nav__item--current">
-                <a href="">подбор программы</a>
+                <a class="main-nav__link" href="">подбор программы</a>
               </li>
             </ul>
           </div>
@@ -45,15 +45,15 @@
             <div class="container">
               <ul class="cat-data__list" role="none">
                 <li class="cat-data__item">
-                  <label class="questionnaires__label-input" for="name">Имя:*</label>
+                  <label class="questionnaires__label" for="name">Имя:*</label>
                   <input class="questionnaires__input" type="text" name="cat-name" id="name" placeholder="барсик" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required>
                 </li>
                 <li class="cat-data__item">
-                  <label class="questionnaires__label-input" for="weight">Вес (кг):*</label>
+                  <label class="questionnaires__label" for="weight">Вес (кг):*</label>
                   <input class="questionnaires__input" type="text" name="cat-weight" id="weight" placeholder="7" pattern="^[ 0-9]+$" required>
                 </li>
                 <li class="cat-data__item">
-                  <label class="questionnaires__label-input" for="age">Возраст (лет):</label>
+                  <label class="questionnaires__label" for="age">Возраст (лет):</label>
                   <input class="questionnaires__input" type="text" name="cat-age" id="age" placeholder="7" pattern="^[ 0-9]+$">
                 </li>
               </ul>
@@ -64,16 +64,16 @@
             <div class="container">
               <ul class="cat-program__list" role="none">
                 <li class="cat-program__item">
-                  <label class="questionnaires__label" for="slimming">Похудение</label>
                   <input class="questionnaires__radio" type="radio" id="slimming" name="cat-program" value="weight-loss-program" checked>
+                  <label class="questionnaires__label questionnaires__label--radio" for="slimming">Похудение</label>
                 </li>
                 <li class="cat-program__item">
-                  <label class="questionnaires__label" for="weight-gain">Набор массы</label>
                   <input class="questionnaires__radio" type="radio" id="weight-gain" name="cat-program" value="weight-gain-program">
+                  <label class="questionnaires__label questionnaires__label--radio" for="weight-gain">Набор массы</label>
                 </li>
                 <li class="cat-program__item">
-                  <label class="questionnaires__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
                   <input class="questionnaires__radio" type="radio" id="need-advice" name="cat-program" value="need-advice">
+                  <label class="questionnaires__label questionnaires__label--radio" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </div>
@@ -81,15 +81,15 @@
         </section>
         <section class="contact-details questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <legend class="title-wrapper"><span class="title">Контактные данные (владельца кота)</span></legend>
+            <legend class="title-wrapper"><span class="title title--form">Контактные данные (владельца кота)</span></legend>
             <div class="container">
               <ul class="contact-details__list" role="none">
                 <li class="contact-details__item">
-                  <label class="questionnaires__label-input" for="mail">Email:*</label>
+                  <label class="questionnaires__label" for="mail">Email:*</label>
                   <input class="questionnaires__input" type="email" name="mail-owner" id="mail" placeholder="kuklachev@gmail.com" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
                 </li>
                 <li class="contact-details__item">
-                  <label class="questionnaires__label-input" for="phone">Телефон:*</label>
+                  <label class="questionnaires__label" for="phone">Телефон:*</label>
                   <input class="questionnaires__input" type="tel" name="phone-owner" id="phone" placeholder="8 (960) 900-60-90" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
                 </li>
               </ul>
@@ -97,31 +97,31 @@
           </fieldset>
         </section>
         <section class="comment questionnaires__item">
-            <div class="title-wrapper"><label class="title" for="comment">Комментарий</label></div>
+            <div class="title-wrapper"><label class="title title--form container" for="comment">Комментарий</label></div>
             <div class="container">
               <textarea class="questionnaires__input comment__textarea" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
         </section>
         <section class="additionally questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <legend class="title-wrapper"><span class="title">Дополнительно</span></legend>
+            <legend class="title-wrapper"><span class="title title--form">Дополнительно</span></legend>
             <div class="container">
               <ul class="additionally__list" role="none">
                 <li class="additionally__item">
-                  <label class="questionnaires__label" for="sweetener">сахарозаменитель</label>
                   <input class="questionnaires__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label class="questionnaires__label questionnaires__label--checkbox" for="sweetener">сахарозаменитель</label>
                 </li>
                 <li class="additionally__item">
-                  <label class="questionnaires__label" for="drinking-water">питьевая вода</label>
                   <input class="questionnaires__checkbox" type="checkbox" name="drinking-water" id="drinking-water">
+                  <label class="questionnaires__label questionnaires__label--checkbox" for="drinking-water">питьевая вода</label>
                 </li>
                 <li class="additionally__item">
-                  <label class="questionnaires__label" for="milk">молоко</label>
                   <input class="questionnaires__checkbox" type="checkbox" name="milk" id="milk">
+                  <label class="questionnaires__label questionnaires__label--checkbox" for="milk">молоко</label>
                 </li>
                 <li class="additionally__item">
-                  <label class="questionnaires__label" for="vitamins">витамины</label>
                   <input class="questionnaires__checkbox" type="checkbox" name="vitamins" id="vitamins">
+                  <label class="questionnaires__label questionnaires__label--checkbox" for="vitamins">витамины</label>
                 </li>
               </ul>
             </div>
@@ -143,14 +143,14 @@
         </div>
         <div class="address__map"></div>
       </div>
-      <div class="page-footer__wrapper">
-        <a class="text-logo page-footer__text-logo" href="./index.html">
+      <div class="page-footer__wrapper container">
+        <a class="logo logo--text page-footer__logo" href="./index.html">
           <img src="./img/text-logo.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <div class="social page-footer__social">
           <a class="socila__link socila__link--vkontakte" href=""><span class="visually-hidden">Мы в ВКонтакте</span></a>
-          <a class="socila__link socila__link--facebook" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          <a class="socila__link socila__link--instagram" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
+          <a class="socila__link socila__link--instagram" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          <a class="socila__link socila__link--facebook" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
         </div>
         <div class="copyright page-footer__copyright">
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>

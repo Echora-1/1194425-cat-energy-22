@@ -1,0 +1,17 @@
+.main-screen {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    background: linear-gradient(to left, rgba($apple, 0.85) 50%, $white 50%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 720px;
+      height: 695px;
+      background: url("../img/index-background-desktop.jpg") no-repeat right top;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+    }
+  }
+}

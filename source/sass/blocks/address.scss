@@ -19,6 +19,12 @@
 }
 
 .address__wrapper {
+  background-color: $basic_grey;
+
+  @media (min-width: $desktop-width) {
+    background-color: $white;
+  }
+
   &--index {
     background-color: $white;
   }
