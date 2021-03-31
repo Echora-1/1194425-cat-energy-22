@@ -1,0 +1,109 @@
+.questionnaires {
+  & ul {
+    list-style: none;
+  }
+
+  & fieldset {
+    border: none;
+  }
+}
+
+.questionnaires__description {
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.questionnaires__input {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special_dark-grey;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  border: 1px solid $mercury;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    border: 1px solid $silver;
+  }
+
+  &:focus {
+    outline: 1px solid $special_dark-grey;
+    border: 1px solid $special_dark-grey;
+  }
+
+  &--error {
+    outline: 1px solid $tangerine;
+    border: 1px solid $tangerine;
+  }
+}
+
+
+.questionnaires__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--radio {
+    color: $special_dark-grey-2;
+  }
+
+  &--checkbox {
+    color: $black;
+  }
+}
+
+.questionnaires__radio {
+  &:disabled + .questionnaires__label--radio {
+    opacity: 0.3;
+  }
+}
+
+.questionnaires__checkbox {
+  &:disabled + .questionnaires__label--checkbox {
+    opacity: 0.3;
+  }
+}
+
+.questionnaires__submit-button {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.questionnaires__footer-text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
