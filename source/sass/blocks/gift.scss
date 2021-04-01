@@ -1,0 +1,26 @@
+.gift {
+  width: 280px;
+  height: 290px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/gift-photo-mobile.png");
+
+  @media (min-width: $tablet-width) {
+    width: 710px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    height: 290px;
+    background-image: url("../img/gift-photo-desktop.png");
+  }
+}
+
+.gift__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+}

@@ -5,6 +5,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
   }
@@ -40,17 +41,17 @@
 .main-nav__link {
   color: $black;
 
-  &--index {
-    @media (min-width: $desktop-width) {
-      color: $white;
-    }
-  }
-
   &:hover {
     opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
   }
 }
