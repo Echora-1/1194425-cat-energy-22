@@ -12,14 +12,54 @@
 
 .description__list {
   list-style: none;
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
+  }
+}
+
+.description__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-right: 137px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    min-width: 250px;
+    min-height: 280px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 50px;
+  }
 }
 
 .description__icon {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: $apple;
   background-repeat: no-repeat;
   background-position: center;
+
 
   &--leaf {
     background-image: url("../img/icon_leaf.svg");
@@ -38,7 +78,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
     height: 80px;
   }
 }
@@ -46,4 +87,9 @@
 .description__text {
   font-family: "Arial", sans-serif;
   color: $special_dark-grey;
+  min-width: 200px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 250px;
+  }
 }

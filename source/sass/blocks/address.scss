@@ -1,9 +1,16 @@
 .address {
   min-height: 114px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
     min-height: 201px;
+    padding-top: 65px;
   }
+}
+
+.address__container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .address__title {
@@ -11,6 +18,7 @@
   line-height: 18px;
   color: $cod_gray;
   text-transform: uppercase;
+  max-width: 180px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -35,6 +43,7 @@
   font-size: 14px;
   line-height: 20px;
   color: $special_dark-grey;
+  max-width: 180px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

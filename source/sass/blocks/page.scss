@@ -11,6 +11,8 @@
   line-height: 18px;
   font-size: 14px;
   color: $black;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 
   @media (min-width: $tablet-width) {
     line-height: 24px;

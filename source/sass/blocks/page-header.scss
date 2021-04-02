@@ -1,0 +1,23 @@
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  &--text {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.page-header__main-nav {
+  @media (min-width: $tablet-width) {
+    max-width: 62%;
+  }
+}

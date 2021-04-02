@@ -13,18 +13,64 @@
   }
 }
 
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.example__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
+    margin-right: 134px;
+  }
+}
+
 .example__text {
   font-family: "Arial", sans-serif;
   color: $special_dark-grey;
+}
+
+.example__stats {
+  min-width: 124px;
+
+  & + & {
+    margin-left: 30px;
+  }
 }
 
 .example__price {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    width: auto;
+    margin-left: auto;
+    align-self: center;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.example__slider {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.example__image {
+  text-align: center;
+  width: 100%;
 }
