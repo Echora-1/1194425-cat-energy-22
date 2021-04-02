@@ -1,0 +1,27 @@
+.sub-product {
+  min-height: 100px;
+}
+
+.sub-product__name {
+  font-size: 16px;
+  line-height: 16px;
+  color: $special_dark-grey-2;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.sub-product__detail {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

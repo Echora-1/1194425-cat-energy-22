@@ -79,24 +79,6 @@
   }
 }
 
-.questionnaires__submit-button {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  border: none;
-  cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .questionnaires__footer-text {
   font-family: "Arial", sans-serif;
   font-size: 14px;

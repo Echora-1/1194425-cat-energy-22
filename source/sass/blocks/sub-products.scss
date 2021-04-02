@@ -1,0 +1,11 @@
+.sub-products__list {
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $silver;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
+}
