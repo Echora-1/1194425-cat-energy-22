@@ -1,0 +1,13 @@
+.comment {
+  min-height: 150px;
+}
+
+.comment__textarea {
+  width: 100%;
+  max-width: 1220px;
+  min-height: 150px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 175px;
+  }
+}

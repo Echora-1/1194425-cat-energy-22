@@ -1,0 +1,7 @@
+.cat-program {
+  min-height: 115px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+  }
+}
