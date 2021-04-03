@@ -15,3 +15,11 @@
     background: url("../img/index-can.png") no-repeat 60% center;
   }
 }
+
+.promo__container {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+}

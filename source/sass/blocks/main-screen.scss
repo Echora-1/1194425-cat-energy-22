@@ -1,7 +1,14 @@
 .main-screen {
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+
   @media (min-width: $desktop-width) {
     position: relative;
     background: linear-gradient(to left, rgba($apple, 0.85) 50%, $white 50%);
+    padding-top: 53px;
 
     &::before {
       position: absolute;
@@ -9,7 +16,7 @@
       width: 720px;
       height: 695px;
       background: url("../img/index-background-desktop.jpg") no-repeat right top;
-      top: 0;
+      top: -20px;
       left: 50%;
       z-index: -1;
     }

@@ -14,21 +14,32 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
 
-  &--index {
-    @media (min-width: $desktop-width) {
-      background-color: rgba($apple, 0.85);
-    }
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
 .main-nav__list {
   list-style: none;
+  text-align: center;
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 440px;
+  }
 }
 
 .main-nav__item {
   &--current {
-    border-bottom: 2px solid $apple;
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $apple;
+    }
   }
 
   &--current-index {

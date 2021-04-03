@@ -9,3 +9,43 @@
     min-height: 380px;
   }
 }
+
+.offers__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.offers__item {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 280px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 25% auto 25%;
+    grid-template-columns: 60% 40%;
+    column-gap: 18px;
+    min-height: 372px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 374px;
+  }
+}
+
+
+.offers__icon {
+  grid-column: 2/ 3;
+  grid-row: 1/ 4;
+}
