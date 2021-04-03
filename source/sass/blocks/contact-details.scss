@@ -1,0 +1,25 @@
+.contact-details {
+  min-height: 105px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 125px;
+  }
+}
+
+.contact-details__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-details__item {
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: 480px;
+
+    &:nth-child(odd) {
+      margin-right: 75px;
+    }
+  }
+}

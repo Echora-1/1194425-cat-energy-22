@@ -1,0 +1,7 @@
+.cat-data {
+  min-height: 160px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,22 @@
+.additionally {
+  min-height: 150px;
+}
+
+.additionally__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.additionally__item {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 45%;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 105px;
+    }
+  }
+}
