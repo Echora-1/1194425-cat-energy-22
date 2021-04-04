@@ -3,7 +3,8 @@
   line-height: 20px;
   text-transform: uppercase;
   background-color: $apple;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   min-height: 40px;
   display: inline-block;
   text-align: center;

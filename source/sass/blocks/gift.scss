@@ -4,17 +4,24 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/gift-photo-mobile.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 710px;
     height: 200px;
     background-image: url("../img/gift-photo-tablet.png");
+    flex-direction: row;
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
     height: 290px;
     background-image: url("../img/gift-photo-desktop.png");
+    flex-direction: column;
   }
 }
 
