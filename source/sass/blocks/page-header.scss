@@ -9,7 +9,9 @@
     padding: 0;
 
     &--hidden {
-      margin-bottom: 14px;
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 14px;
+      }
     }
   }
 }
