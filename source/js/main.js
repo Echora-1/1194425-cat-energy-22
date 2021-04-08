@@ -26,7 +26,7 @@ setTimeout(() => {
   if(headerContainer.classList.contains('page-header__container--hidden')) {
     headerContainer.classList.remove('page-header__container--hidden');
   }
-}, 1000)
+}, 0)
 
 const handleMenuOpening = () => {
   menuOpenButton.classList.toggle('menu-opener--active');
