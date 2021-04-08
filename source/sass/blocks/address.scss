@@ -1,16 +1,12 @@
-.address {
-  min-height: 114px;
-  padding-top: 28px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 201px;
-    padding-top: 65px;
-  }
-}
-
 .address__container {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    align-items: center;
+    min-height: 201px;
+  }
 }
 
 .address__title {
@@ -18,11 +14,18 @@
   line-height: 18px;
   color: $cod_gray;
   text-transform: uppercase;
-  max-width: 180px;
+  max-width: 140px;
+  margin: 2px 0 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 21px;
+    max-width: 171px;
+    margin: 3px 0 0 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 76px;
   }
 }
 
@@ -31,6 +34,12 @@
 
   @media (min-width: $desktop-width) {
     background-color: $white;
+    max-width: 570px;
+    width: 100%;
+    min-height: 201px;
+    position: absolute;
+    left: 7.65%;
+    top: 24%;
   }
 
   &--index {
@@ -43,10 +52,39 @@
   font-size: 14px;
   line-height: 20px;
   color: $special_dark-grey;
-  max-width: 180px;
+  max-width: 140px;
+  margin: 1px 0 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    max-width: 160px;
+    text-align: right;
+    margin: 0 43px 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 82px 0 0;
+    text-align: left;
+  }
+}
+
+.address__tablet-br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.address__map {
+  height: 387px;
+
+  @media (min-width: $tablet-width) {
+    height: 446px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
   }
 }

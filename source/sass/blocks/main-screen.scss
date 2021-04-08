@@ -9,14 +9,16 @@
     position: relative;
     background: linear-gradient(to left, rgba($apple, 0.85) 50%, $white 50%);
     padding-top: 53px;
+    min-height: 694px;
+    margin-bottom: 82px;
 
     &::before {
       position: absolute;
       content: "";
       width: 720px;
-      height: 695px;
+      height: 696px;
       background: url("../img/index-background-desktop.jpg") no-repeat right top;
-      top: -20px;
+      top: 0;
       left: 50%;
       z-index: -1;
     }

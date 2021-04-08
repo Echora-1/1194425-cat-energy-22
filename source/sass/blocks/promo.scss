@@ -1,25 +1,85 @@
 .promo {
   min-height: 480px;
+  margin-bottom: 22px;
   background:
     url("../img/index-can-mobile.png") no-repeat center 167px,
     linear-gradient(to bottom, rgba($apple, 0.85) 63%, $white 63%),
     url("../img/index-background-desktop.png") no-repeat center 0;
 
   @media (min-width: $tablet-width) {
-    min-height: 840px;
-    background: url("../img/index-can-tablet.png") no-repeat center 231px, $white;
+    min-height: 865px;
+    padding: 36px 83px 20px 82px;
+    margin-bottom: 9px;
+    background: url("../img/index-can-tablet.png") no-repeat center 265px, $white;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 500px;
-    background: url("../img/index-can.png") no-repeat 60% center;
+    padding: 36px 80px 0 80px;
+    background: url("../img/index-can.png") no-repeat 63% 34px;
   }
 }
 
 .promo__container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 480px;
 
   @media (min-width: $tablet-width) {
     text-align: left;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-height: 490px;
+  }
+}
+
+.promo__title {
+  margin: 0;
+  padding: 27px 0 25px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 28px 4px 25px 4px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    padding: 30px 4px 25px 0;
+  }
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 5px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.promo__button {
+  margin-top: auto;
+
+  @media (min-width: $tablet-width) {
+    min-height: 54px;
+    max-width: 244px;
+    padding: 17px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 2px;
   }
 }

@@ -3,6 +3,19 @@
   display: block;
   mask-repeat: no-repeat;
   mask-position: center;
+  margin-right: 12%;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8%;
+  }
+
+  &:focus {
+    border: 10px solid $apple;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover {
     background-color: $apple;

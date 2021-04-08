@@ -1,10 +1,27 @@
+.stats {
+  border: 1px solid $silver;
+  border-radius: 3px;
+  min-width: 124px;
+  height: 56px;
+  text-align: center;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-width: 162px;
+    height: 72px;
+  }
+}
+
 .stats__number {
   font-size: 24px;
   line-height: 24px;
+  margin: 13px 0 0 0;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    margin: 14px 0 0 0;
   }
 }
 
@@ -13,9 +30,29 @@
   color: $special_dark-grey;
   font-size: 12px;
   line-height: 12px;
+  width: 70%;
+  position: absolute;
+  background: $gallery;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -51%;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    width: 87%;
+    background: $white;
+    padding: 0 5px;
+    bottom: -30%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $gallery;
+  }
+
+  &--weight {
+    @media (min-width: $tablet-width) {
+      width: 70%;
+    }
   }
 }
