@@ -28,8 +28,10 @@
   }
 
   &--no-js {
-    max-height: 625px;
-    margin-top: 13px;
+    @media (max-width: $mobile-width-only) {
+      max-height: 625px;
+      margin-top: 13px;
+    }
   }
 
   &--hidden {
