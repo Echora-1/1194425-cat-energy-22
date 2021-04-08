@@ -1,12 +1,32 @@
 .description {
   min-height: 300px;
+  margin: 0 0 42px 0;
 
   @media (min-width: $tablet-width) {
     min-height: 600px;
+    margin: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     min-height: 300px;
+  }
+}
+
+.description__container {
+  @media (min-width: $desktop-width) {
+    padding: 0 105px;
+  }
+}
+
+.description__title {
+  margin: 27px 0 38px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 0 38px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 65px 0 38px 5px;
   }
 }
 
@@ -14,20 +34,36 @@
   list-style: none;
   padding-left: 0;
 
+  @media (min-width: 600px) {
+    display: grid;
+    justify-content: center;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
+    justify-content: start;
+    max-width: 800px;
+    counter-reset: number 0;
+    margin: 0 0 3px 0;
+  }
+
+  @media (min-width: 800px) {
+    justify-content: center;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
     max-width: none;
+    margin: 0;
+    justify-content: space-between;
   }
 }
 
 .description__item {
   display: flex;
   align-items: center;
+  position: relative;
 
   &:not(:last-child) {
     @media (max-width: $mobile-width-only) {
@@ -35,21 +71,48 @@
     }
   }
 
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      &::after {
+        right: 9%;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 0 5px;
+    }
+  }
+
   &:nth-child(odd) {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      margin-right: 137px;
+      margin-right: 134px;
     }
   }
 
   @media (min-width: $tablet-width) {
     display: block;
-    min-width: 250px;
+    min-width: 230px;
+    max-width: 250px;
     min-height: 280px;
     margin-bottom: 37px;
+    counter-increment: number;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 50px;
+    margin: 0;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: counter(number);
+      position: absolute;
+      top: -2.5%;
+      right: 0.5%;
+      color: $basic_grey;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -1;
+    }
   }
 }
 
@@ -81,6 +144,7 @@
     min-width: 80px;
     max-width: 80px;
     height: 80px;
+    margin: 34px 0 30px 0;
   }
 }
 
@@ -88,8 +152,19 @@
   font-family: "Arial", sans-serif;
   color: $special_dark-grey;
   min-width: 200px;
+  margin: 0 0 0 20px;
 
   @media (min-width: $tablet-width) {
-    max-width: 250px;
+    max-width: 245px;
+    display: inline;
+    margin: 0;
+  }
+}
+
+.description__tablet-br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
