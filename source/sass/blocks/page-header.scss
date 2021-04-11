@@ -1,3 +1,20 @@
+.page-header {
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+  }
+
+  &--index {
+    padding-top: 0;
+  }
+}
+
+
 .page-header__container {
   display: flex;
   flex-wrap: wrap;
@@ -7,11 +24,20 @@
   @media (max-width: $mobile-width-only) {
     background-color: $white;
     padding: 0;
+    border-bottom: 1px solid $silver;
 
     &--hidden {
       @media (max-width: $mobile-width-only) {
         margin-bottom: 14px;
       }
+    }
+
+    &--index {
+      border-bottom: 1px solid $white;
+    }
+
+    &--open {
+      border: none;
     }
   }
 }
@@ -23,10 +49,8 @@
 
 
   &--text {
-    margin-top: 5px;
-
     @media (max-width: $mobile-width-only) {
-      margin: 0 20px;
+      margin: 5px 20px 0 20px;
     }
 
     @media (min-width: $tablet-width) {

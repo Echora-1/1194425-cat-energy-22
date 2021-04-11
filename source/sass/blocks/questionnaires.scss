@@ -1,19 +1,42 @@
 .questionnaires {
+  padding: 3px 0 0 0;
+
   & ul {
     list-style: none;
   }
 
   & fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.questionnaires__title {
+  margin: 24px 0 38px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 62px 20px 20px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 77px 20px 20px 0;
   }
 }
 
 .questionnaires__description {
   text-transform: uppercase;
+  text-align: left;
+  margin: 14px 0 24px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin: 54px 0 66px 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 56px 0 66px 0;
   }
 }
 
@@ -25,10 +48,53 @@
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   border: 1px solid $mercury;
+  height: 45px;
+  margin: 0 0 0 4.5%;
+  padding: 1px 11px 1px 11px;
+  flex-grow: 2;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    height: 52px;
+    padding: 1px 15px;
+    margin: 0 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 17px;
+  }
+
+  &--contact-details {
+    padding-right: 37px;
+    border-color: $silver;
+    margin: 0 0 0 2.8%;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 0 3%;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 0 2.8%;
+    }
+  }
+
+  &--mail,
+  &--phone {
+    background-repeat: no-repeat;
+    background-position: center right 13px;
+
+    @media (min-width: $tablet-width) {
+      background-position: center right 16px;
+    }
+  }
+
+  &--mail {
+    background-image: url("../img/icon_email.svg");
+  }
+
+  &--phone {
+    background-image: url("../img/icon_phone.svg");
   }
 
   &:hover {
@@ -60,37 +126,133 @@
 
   &--radio {
     color: $special_dark-grey-2;
+    position: relative;
+    vertical-align: middle;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $silver;
+      position: absolute;
+      top: -3px;
+      left: -45px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+        left: -60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+        left: -62px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        border: 1px solid $dark-silver;
+      }
+    }
   }
 
+  &--contact-details {
+    margin: 10px 0 0 0;
+  }
+
+
   &--checkbox {
+    position: relative;
     color: $black;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: 1px solid $silver;
+      position: absolute;
+      top: -2px;
+      left: -46px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (min-width: $tablet-width) {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+        left: -59px;
+      }
+    }
   }
 }
 
 .questionnaires__radio {
+  display: none;
+
   &:disabled + .questionnaires__label--radio {
     opacity: 0.3;
+  }
+
+  &:checked + .questionnaires__label--radio::before {
+    background-image: url("../img/radiobutton-active.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/radiobutton-active--tablet.svg");
+    }
   }
 }
 
 .questionnaires__checkbox {
+  display: none;
+
   &:disabled + .questionnaires__label--checkbox {
     opacity: 0.3;
+  }
+
+  &:checked + .questionnaires__label--checkbox::before {
+    background-image: url("../img/checkbox_active.svg");
   }
 }
 
 .questionnaires__footer {
   text-align: center;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 0 65px 0;
+    margin: 0 auto;
+    max-width: 626px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 80px 0;
+    max-width: 1219px;
   }
 }
 
 .questionnaires__submit-button {
+  padding: 10px 22px;
+  margin-bottom: 7px;
+
   @media (min-width: $tablet-width) {
-    margin-right: 8%;
+    margin-right: 10%;
+    min-height: 52px;
+    min-width: 282px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 6.8%;
+    min-height: 52px;
+    min-width: 568px;
   }
 }
 
@@ -106,8 +268,15 @@
 }
 
 .questionnaires__specification {
+  margin: 0 0 25px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 61px 0;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }

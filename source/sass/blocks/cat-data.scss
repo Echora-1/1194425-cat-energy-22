@@ -5,3 +5,39 @@
     min-height: 200px;
   }
 }
+
+.cat-data__container {
+  @media (min-width: $desktop-width) {
+    padding: 0 0 0 104px;
+  }
+}
+
+.cat-data__list {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 89%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 196px;
+    min-width: 570px;
+    max-width: 40%;
+  }
+}
+
+.cat-data__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+  }
+}

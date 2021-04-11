@@ -32,6 +32,7 @@ const handleMenuOpening = () => {
   menuOpenButton.classList.toggle('menu-opener--active');
   menuWrapper.classList.toggle('main-nav__wrapper--open');
   menu.classList.toggle('main-nav--open');
+  headerContainer.classList.toggle('page-header__container--open')
 };
 
 if(menuOpenButton) {

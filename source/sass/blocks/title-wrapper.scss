@@ -1,0 +1,35 @@
+.title-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 0;
+}
+
+.title-wrapper__decor {
+  height: 2px;
+  width: auto;
+  background-color: $basic_green;
+  flex-grow: 2;
+  margin: 17px 0 0 0;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    margin: 22px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 21px 0 0 0;
+  }
+
+  &--tablet {
+    display: none;
+    max-width: 4%;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 4.8%;
+    }
+  }
+}
