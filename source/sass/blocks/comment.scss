@@ -2,12 +2,29 @@
   min-height: 150px;
 }
 
-.comment__textarea {
-  width: 100%;
-  max-width: 1220px;
-  min-height: 150px;
+.comment__container {
+  padding: 40px 20px 18px 20px;
 
   @media (min-width: $tablet-width) {
-    min-height: 175px;
+    padding: 76px 67px 60px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 75px 110px 63px 110px;
+  }
+}
+
+.comment__textarea {
+  width: 100%;
+  min-height: 150px;
+  margin: 0;
+  padding: 8px 11px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 17px;
   }
 }

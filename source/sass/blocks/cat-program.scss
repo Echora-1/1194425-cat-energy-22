@@ -5,3 +5,47 @@
     min-height: 200px;
   }
 }
+
+.cat-program__container {
+  @media (min-width: $desktop-width) {
+    padding: 0 104px 0 0;
+  }
+}
+
+.cat-program__list {
+  padding: 0;
+  margin: 26px 0 5px 0;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $mercury;
+    min-height: 196px;
+    width: 100%;
+    max-width: 89%;
+    padding: 29px 25px 10px 25px;
+    margin: 26px auto 5px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 570px;
+    margin: 0;
+    max-width: 40%;
+  }
+}
+
+.cat-program__item {
+  min-height: 30px;
+  padding: 0 0 0 45px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+    padding: 0 0 0 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 0 64px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}

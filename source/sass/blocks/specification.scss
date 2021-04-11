@@ -1,0 +1,23 @@
+.specification {
+  & fieldset {
+    padding: 0 0 9px 0;
+    border-bottom: 1px solid $silver-2;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+
+      &:not(:last-child) {
+        margin: 0 0 37px 0;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin: 0 5.5% 0 0;
+      }
+    }
+  }
+}
