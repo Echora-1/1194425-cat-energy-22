@@ -9,12 +9,14 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    width: 710px;
+    width: 708px;
     height: 200px;
     background-image: url("../img/gift-photo-tablet.png");
     flex-direction: row;
+    margin-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,6 +24,19 @@
     height: 290px;
     background-image: url("../img/gift-photo-desktop.png");
     flex-direction: column;
+    margin: 0 0 53px 43px;
+  }
+}
+
+.gift__icon {
+  margin-top: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 80px 5px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 35px 0 0 3px;
   }
 }
 
@@ -30,4 +45,17 @@
   font-size: 16px;
   line-height: 20px;
   color: $white;
+  max-width: 175px;
+  text-align: center;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    margin: 14px 30px 12px 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin: 5px 30px 22px 26px;
+  }
 }
