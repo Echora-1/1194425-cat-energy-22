@@ -3,14 +3,18 @@
   line-height: 16px;
   color: $special_dark-grey-2;
   text-transform: uppercase;
+  margin: 14px 0 10px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin: 25px 0 0 0;
+    max-width: 165px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: auto;
+    margin-left: 1px;
   }
 }
 
@@ -21,14 +25,55 @@
   color: $special_dark-grey;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    margin: 27px 0 0 0;
+    margin-left: auto;
+    max-width: 230px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 280px;
+    min-width: 288px;
     margin-right: 40px;
+  }
+}
+
+.sub-product__detail-key {
+  max-width: 120px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 150px;
+    margin-right: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1px;
+    margin-left: 2px;
+  }
+}
+
+.sub-product__detail-value {
+  max-width: 60px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 70px;
+  }
+}
+
+.sub-product__button {
+  padding: 10px 22px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 630px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 244px;
+    margin-top: 15px;
   }
 }
