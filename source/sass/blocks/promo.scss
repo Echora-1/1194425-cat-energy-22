@@ -6,17 +6,32 @@
     linear-gradient(to bottom, rgba($apple, 0.85) 63%, $white 63%),
     url("../img/index-background-desktop.png") no-repeat center 0;
 
+  @media (min-resolution: 2dppx) {
+    background:
+      url("../img/index-can-mobile@2x.png") no-repeat center 167px / 280px auto,
+      linear-gradient(to bottom, rgba($apple, 0.85) 63%, $white 63%),
+      url("../img/index-background-desktop@2x.png") no-repeat center 0 / 320px auto;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 865px;
     padding: 36px 83px 20px 82px;
     margin-bottom: 9px;
     background: url("../img/index-can-tablet.png") no-repeat center 265px, $white;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index-can-tablet@2x.png") no-repeat center 265px / 709px auto, $white;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 500px;
     padding: 36px 80px 0 80px;
     background: url("../img/index-can.png") no-repeat 63% 34px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index-can@2x.png") no-repeat 63% 34px / 552px auto;
+    }
   }
 }
 
