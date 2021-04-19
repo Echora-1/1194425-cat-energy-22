@@ -9,11 +9,11 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted rgba($black, 0.4);
-    margin: 43px 0 0 0;
+    margin: 8px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 18px 0 25px 0;
+    margin: 27px 0 16px 0;
   }
 
   &:hover {
@@ -36,11 +36,11 @@
     min-height: 6px;
     border: none;
     background: $silver;
-    margin: 55px 20px 0 21px;
+    margin: 20px 20px 0 21px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 30px 20px 0 21px;
+    margin: 40px 20px 0 21px;
   }
 }
 

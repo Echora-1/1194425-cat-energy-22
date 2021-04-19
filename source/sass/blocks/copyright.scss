@@ -11,19 +11,27 @@
 }
 
 .copyright__link {
-  background-color: $special_grey-2;
   display: block;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  width: 27px;
-  height: 34px;
-  mask-image: url("../img/htmlacademy.svg");
+  margin: 12px 0 0 20px;
 
-  &:hover {
-    background-color: $apple;
+  @media (min-width: $tablet-width) {
+    margin: 10px 0 0 20px;
   }
 
-  &:active {
+  & svg {
+    fill: $special_grey-2;
+    transform: scale(1.4);
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1.5);
+    }
+  }
+
+  &:hover svg {
+    fill: $apple;
+  }
+
+  &:active svg {
     opacity: 0.3;
   }
 }

@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 0 20px;
+  padding: 39px 20px 0 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -59,18 +59,24 @@
   @media (min-width: $tablet-width) {
     border: none;
     width: 33%;
+    align-items: start;
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 29%;
+    padding-top: 15px;
   }
 }
 
 
 .page-footer__copyright {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 59px;
   border-top: 1px solid $silver-2;
-  padding: 20px 0;
+  padding: 10px 0 0 0;
 
   @media (min-width: $tablet-width) {
     max-width: 165px;

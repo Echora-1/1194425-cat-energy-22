@@ -1,5 +1,4 @@
-.socila__link {
-  background-color: $special_grey-2;
+.social__link {
   display: block;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -9,37 +8,50 @@
     margin-right: 8%;
   }
 
-  &:focus {
-    border: 10px solid $apple;
-  }
-
   &:last-child {
     margin-right: 0;
   }
 
-  &:hover {
-    background-color: $apple;
+  &:hover .social__icon {
+    fill: $apple;
+    stroke: $apple;
   }
 
-  &:active {
-    background-color: rgba($apple, 0.3);
+  &:active .social__icon {
+    fill: rgba($apple, 0.3);
+    stroke: rgba($apple, 0.3);
   }
 
   &--vkontakte {
     width: 23px;
     height: 16px;
-    mask-image: url("../img/icon_vkontakte.svg");
   }
 
   &--instagram {
     width: 16px;
     height: 16px;
-    mask-image: url("../img/icon_instagram.svg");
+
+    @media (min-width: $tablet-width) {
+      margin-left: 5px;
+    }
   }
 
   &--facebook {
     width: 22px;
     height: 22px;
-    mask-image: url("../img/icon_facebook.svg");
+  }
+}
+
+
+.social__icon {
+  fill: $special_grey-2;
+  stroke: $special_grey-2;
+
+  @media (min-width: $tablet-width) {
+    transform: scale(1.35);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: scale(1.42);
   }
 }
