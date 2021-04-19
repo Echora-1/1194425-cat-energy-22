@@ -7,3 +7,28 @@
     opacity: 0.6;
   }
 }
+
+
+.logo__icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
