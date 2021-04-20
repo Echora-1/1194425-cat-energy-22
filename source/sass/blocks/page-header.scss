@@ -12,6 +12,12 @@
   &--index {
     padding-top: 0;
   }
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      padding-top: 50px;
+    }
+  }
 }
 
 
