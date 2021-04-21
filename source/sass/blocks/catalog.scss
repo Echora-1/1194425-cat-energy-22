@@ -10,6 +10,12 @@
   }
 }
 
+.catalog__list-container {
+  @media (min-width: $desktop-width) {
+    padding: 0 100px;
+  }
+}
+
 .catalog__list {
   list-style: none;
   display: flex;
@@ -67,6 +73,7 @@
     width: 324px;
     border-bottom: none;
     margin-bottom: 59px;
+    justify-content: start;
   }
 
   @media (min-width: 1142px) {
@@ -76,14 +83,49 @@
   @media (min-width: $desktop-width) {
     min-width: 245px;
     width: 245px;
-    margin-right: 80px;
+    margin-right: 78px;
     min-height: 511px;
     margin-bottom: 62px;
+    padding-top: 0;
   }
 
   &:nth-child(odd) {
+    @media (min-width: $tablet-width) {
+      & img {
+        margin-top: 28px;
+        margin-bottom: 21px;
+      }
+    }
+
     @media (min-width: $tablet-width) and (max-width: 1159px) {
       margin-right: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      & img {
+        margin-top: 28px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &:nth-child(even) img {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &:nth-child(2) img {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 27px;
     }
   }
 
@@ -94,14 +136,7 @@
   }
 
   &:nth-child(4n) {
-    @media (min-width: $desktop-width) and (max-width: 1781px) {
-      margin-right: 0;
-    }
-  }
-
-
-  &:nth-child(5n) {
-    @media (min-width: 1782px) {
+    @media (min-width: $desktop-width) and (max-width: 1752px) {
       margin-right: 0;
     }
   }
@@ -115,12 +150,46 @@
   &:nth-child(5) {
     @media (min-width: $tablet-width) {
       margin-bottom: 60px;
+
+      & img {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 76px;
+      margin-left: 10px;
+
+      & img {
+        margin-bottom: 34px;
+      }
+    }
+  }
+
+  &:nth-child(5n) {
+    @media (min-width: 1782px) {
+      margin-right: 0;
     }
   }
 
   &:first-child {
+    @media (min-width: $tablet-width) {
+      & img {
+        margin-bottom: 23px;
+      }
+    }
+
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-      margin-right: 51px;
+      margin-right: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 76px;
+      margin-left: 10px;
+
+      & img {
+        margin-bottom: 34px;
+      }
     }
   }
 
