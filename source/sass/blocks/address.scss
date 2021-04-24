@@ -3,6 +3,10 @@
     background-color: $basic_grey;
   }
 
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+
   &--index {
     background-color: $white;
   }
@@ -11,6 +15,11 @@
 .address__container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 46px;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 0;
@@ -50,6 +59,7 @@
     position: absolute;
     left: 7.65%;
     top: 24%;
+    z-index: 1;
   }
 
   &--index {
@@ -88,23 +98,35 @@
 }
 
 .address__map {
-  height: 387px;
+  height: 362px;
+  width: 100%;
+  border: none;
+  background-image: url("../img/location.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location@2x.png");
+    background-size: 320px 362px;
+  }
 
   @media (min-width: $tablet-width) {
-    height: 446px;
+    height: 400px;
+    background-image: url("../img/location-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-tablet@2x.png");
+      background-size: 768px 400px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     height: 400px;
-  }
+    background-image: url("../img/location-desktop.png");
 
-  &--form {
-    @media (min-width: $tablet-width) {
-      height: 447px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 395px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-desktop@2x.png");
+      background-size: 1440px 400px;
     }
   }
 }
