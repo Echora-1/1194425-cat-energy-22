@@ -14,12 +14,10 @@
 
   &:hover .social__icon {
     fill: $apple;
-    stroke: $apple;
   }
 
   &:active .social__icon {
-    fill: rgba($apple, 0.3);
-    stroke: rgba($apple, 0.3);
+    opacity: 0.3;
   }
 
   &--vkontakte {
@@ -39,13 +37,22 @@
   &--facebook {
     width: 22px;
     height: 22px;
+
+    & .social__icon {
+      stroke: $special_grey-2;
+      fill: transparent;
+    }
+
+    &:hover .social__icon {
+      stroke: $apple;
+      fill: transparent;
+    }
   }
 }
 
 
 .social__icon {
   fill: $special_grey-2;
-  stroke: $special_grey-2;
 
   @media (min-width: $tablet-width) {
     transform: scale(1.35);

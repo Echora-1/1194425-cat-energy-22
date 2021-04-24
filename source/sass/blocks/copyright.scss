@@ -20,11 +20,6 @@
 
   & svg {
     fill: $special_grey-2;
-    transform: scale(1.4);
-
-    @media (min-width: $tablet-width) {
-      transform: scale(1.5);
-    }
   }
 
   &:hover svg {

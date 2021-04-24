@@ -38,3 +38,21 @@ const handleMenuOpening = () => {
 if(menuOpenButton) {
   menuOpenButton.addEventListener('click', handleMenuOpening)
 }
+
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: new google.maps.LatLng(59.9387165, 30.3208587),
+    zoom: window.matchMedia('(max-width: 1439px)').matches ? 15 : 16,
+    disableDefaultUI: true,
+  });
+
+  const marker = new google.maps.Marker({
+    position: new google.maps.LatLng(59.9384319, 30.3227009),
+    map: map,
+    icon: {
+      url: `${window.matchMedia('(max-width: 767px)').matches ? './img/map-pin' : './img/map-pin_tablet' }${window.devicePixelRatio > 1 ? '@2x.png' : '.png'}`,
+      scaledSize: window.matchMedia('(max-width: 767px)').matches ? new google.maps.Size(57, 53) : new google.maps.Size(113, 106)
+    }
+  });
+}
