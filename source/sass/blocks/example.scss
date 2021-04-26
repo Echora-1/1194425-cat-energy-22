@@ -130,11 +130,19 @@
   }
 }
 
+.example__slider-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .example__slider {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 100%;
 
   @media (min-width: $desktop-width) {
     min-width: 730px;
@@ -145,32 +153,48 @@
 
 .example__image {
   text-align: center;
-  width: 100%;
+  width: 320px;
   height: 232px;
-  margin: 0 0 14px 0;
-
-  & img {
-    margin: 0 7px 0 0;
-    height: 232px;
-    width: 311px;
-
-    @media (min-width: $tablet-width) {
-      border: none;
-      height: 520px;
-      width: 677px;
-      margin: 0;
-    }
-  }
+  margin: 0 auto 14px auto;
+  background-image: url("../img/cat-skinny.png");
+  background-repeat: no-repeat;
+  background-position: left 70% bottom 3px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     height: 530px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 49px 0 0 1px;
+    width: 708px;
+    margin: 49px auto 0 auto;
+    background-image: url("../img/cat-skinny-tablet.png");
+    background-position: left 65% bottom 5px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 4px 0 0 82px;
+    background-position: left 92% bottom 6px;
+  }
+}
+
+
+.example__image-wrapper {
+  width: 50%;
+  height: 232px;
+  overflow: hidden;
+  position: absolute;
+  margin: 0;
+  background-image: url("../img/before-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/before-tablet.png");
+    height: 530px;
+    background-position: 15px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 0 0;
+    margin-left: 60px;
   }
 }

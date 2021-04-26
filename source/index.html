@@ -123,21 +123,19 @@
             </div>
             <p class="example__price">Затраты на питание: <span class="example__price-value">15 000 РУБ.</span></p>
           </div>
-          <div class="slider example__slider">
+          <div class="example__slider-wrapper">
             <div class="example__image">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet.webp 1x, ./img/before-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="./img/before-mobile.webp 1x, ./img/before-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="./img/before-tablet.png 1x, ./img/before-tablet@2x.png 2x">
-                <img src="./img/before-mobile.png" srcset="./img/before-mobile@2x.png 2x"  alt="">
-              </picture>
+              <div class="example__image-wrapper">
+              </div>
             </div>
-            <p class="slider__text" tabindex="0">было</p>
-            <div class="slider__scale">
-              <div class="slider__bar"></div>
+            <div class="slider example__slider">
+              <p class="slider__text" id="before" tabindex="0">было</p>
+              <div class="slider__scale">
+                <div class="slider__bar"></div>
+              </div>
+              <div class="slider__toggle" tabindex="0"><span class="visually-hidden">Изменить результат</span></div>
+              <p class="slider__text" id="after" tabindex="0">стало</p>
             </div>
-            <div class="slider__toggle" tabindex="0"><span class="visually-hidden">Изменить результат</span></div>
-            <p class="slider__text" tabindex="0">стало</p>
           </div>
         </div>
       </section>

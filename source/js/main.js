@@ -1,9 +1,15 @@
 'use strict'
 
+const START_WIDTH = '50%';
 const headerContainer= document.querySelector('.page-header__container');
 const menu = document.querySelector('.main-nav');
 const menuOpenButton = document.querySelector('.menu-opener');
 const menuWrapper = document.querySelector('.main-nav__wrapper');
+const buttonBefore = document.querySelector('#before');
+const buttonAfter = document.querySelector('#after');
+const sliderImage = document.querySelector('.example__image-wrapper');
+
+// Menu
 
 const jsWork = () => {
   menuOpenButton.classList.remove('menu-opener--no-js');
@@ -39,9 +45,10 @@ if(menuOpenButton) {
   menuOpenButton.addEventListener('click', handleMenuOpening)
 }
 
+// Map
 
 function initMap() {
-  const map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.querySelector('#map'), {
     center: new google.maps.LatLng(59.9387165, 30.3208587),
     zoom: window.matchMedia('(max-width: 1439px)').matches ? 15 : 16,
     disableDefaultUI: true,
@@ -56,3 +63,25 @@ function initMap() {
     }
   });
 }
+
+
+// Slider
+sliderImage.style.widt = START_WIDTH;
+let imageWidth = START_WIDTH;
+const handleAfterPressed = () => {
+  if(Number.parseInt(imageWidth) > 0) {
+    imageWidth = `${Number.parseInt(imageWidth) - 1}%`;
+    sliderImage.style.width = imageWidth;
+  }
+}
+
+const handleBeforePressed = () => {
+  if(Number.parseInt(imageWidth) < 100) {
+    imageWidth = `${Number.parseInt(imageWidth) + 1}%`;
+    sliderImage.style.width = imageWidth;
+  }
+}
+
+
+buttonAfter.addEventListener('click', handleAfterPressed)
+buttonBefore.addEventListener('click', handleBeforePressed)
