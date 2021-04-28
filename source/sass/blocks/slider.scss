@@ -3,16 +3,16 @@
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 19px 0 0 0;
+  margin: 18px 0 16px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted rgba($black, 0.4);
-    margin: 8px 0 0 0;
+    margin: 8px 0 16px 0;
   }
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: $desktop-width) {
     margin: 27px 0 16px 0;
   }
 

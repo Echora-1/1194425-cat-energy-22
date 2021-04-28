@@ -122,12 +122,16 @@
     line-height: 30px;
     margin: 0 0 37px 0;
     justify-self: start;
-    min-width: 160px;
+    min-width: 165px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 0 38px 19px;
-    min-width: 165px;
+  }
+
+  &:hover::after {
+    transition: all 0.4s ease 0s;
+    background-position: 0 0;
   }
 
   &:active {
@@ -136,23 +140,22 @@
 
   &::after {
     content: "";
-    width: 25px;
+    width: 100%;
+    max-width: 32px;
     height: 12px;
     position: absolute;
-    background-image: url("../img/icon-arrow.svg");
+    background-image: url("../img/icon_arrow.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -8px 0;
     top: 30%;
-    right: 4%;
+    right: 0;
 
     @media (min-width: $tablet-width) {
       top: 37%;
-      right: 3%;
     }
 
     @media (min-width: $desktop-width) {
       top: 36%;
-      right: 4.5%;
     }
   }
 }
