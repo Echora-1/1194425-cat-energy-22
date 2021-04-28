@@ -35,7 +35,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 65px;
+    margin-right: 60px;
     width: 70%;
   }
 }
@@ -161,6 +161,11 @@
   background-position: left 70% bottom 3px;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-skinny@2x.png");
+    background-size: 244px auto;
+  }
+
   @media (min-width: $tablet-width) {
     height: 530px;
     display: flex;
@@ -168,10 +173,15 @@
     margin: 49px auto 0 auto;
     background-image: url("../img/cat-skinny-tablet.png");
     background-position: left 65% bottom 5px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-skinny-tablet@2x.png");
+      background-size: 545px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 4px 0 0 82px;
+    margin: 4px 0 0 35px;
     background-position: left 92% bottom 6px;
   }
 }
@@ -187,10 +197,20 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 311px auto;
+  }
+
   @media (min-width: $tablet-width) {
     background-image: url("../img/before-tablet.png");
     height: 530px;
     background-position: 15px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+      background-size: 677px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {

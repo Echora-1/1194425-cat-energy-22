@@ -1,6 +1,6 @@
 'use strict'
-
-const START_WIDTH = '50%';
+/* global noUiSlider:readonly */
+const START_WIDTH =  50;
 const headerContainer= document.querySelector('.page-header__container');
 const menu = document.querySelector('.main-nav');
 const menuOpenButton = document.querySelector('.menu-opener');
@@ -8,6 +8,8 @@ const menuWrapper = document.querySelector('.main-nav__wrapper');
 const buttonBefore = document.querySelector('#before');
 const buttonAfter = document.querySelector('#after');
 const sliderImage = document.querySelector('.example__image-wrapper');
+const slider = document.querySelector('#slider');
+let currentWidth = START_WIDTH;
 
 // Menu
 
@@ -66,22 +68,42 @@ function initMap() {
 
 
 // Slider
-sliderImage.style.widt = START_WIDTH;
-let imageWidth = START_WIDTH;
+if(sliderImage) {
+  sliderImage.style.widt = START_WIDTH;
+
+
 const handleAfterPressed = () => {
-  if(Number.parseInt(imageWidth) > 0) {
-    imageWidth = `${Number.parseInt(imageWidth) - 1}%`;
-    sliderImage.style.width = imageWidth;
+  if(currentWidth > 0) {
+    currentWidth -= 1;
+    slider.noUiSlider.set(currentWidth.toFixed(2));
+    sliderImage.style.width = `${currentWidth}%`;
   }
 }
 
 const handleBeforePressed = () => {
-  if(Number.parseInt(imageWidth) < 100) {
-    imageWidth = `${Number.parseInt(imageWidth) + 1}%`;
-    sliderImage.style.width = imageWidth;
+  if(currentWidth < 100) {
+    currentWidth += 1;
+    slider.noUiSlider.set(currentWidth.toFixed(2));
+    sliderImage.style.width = `${currentWidth}%`;
   }
 }
 
-
 buttonAfter.addEventListener('click', handleAfterPressed)
 buttonBefore.addEventListener('click', handleBeforePressed)
+
+noUiSlider.create(slider, {
+  range: {
+      min: 0,
+      max: 100,
+  },
+  start: 50,
+  step: 1,
+  connect: 'lower',
+});
+
+slider.noUiSlider.on('update', (_, handle, unencoded) => {
+  currentWidth = unencoded[handle];
+  sliderImage.style.width =`${currentWidth}%`;
+});
+
+}

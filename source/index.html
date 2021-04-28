@@ -10,6 +10,7 @@
     <link rel="preload" as="image" href="./img/index-can-mobile.png" media="(max-width: 767px) and (max-resolution: 1dppx)">
     <link rel="preload" as="image" href="./img/index-can-tablet.png" media="(min-width: 768px) and (max-width: 1439px) and (max-resolution:1dppx)">
     <link rel="preload" as="image" href="./img/index-can.png" media="(min-width: 1440px)">
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@14.7.0/distribute/nouislider.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="apple-touch-icon" href="./img/favicon152x152.svg" sizes="any" type="svg+xml">
     <link rel="icon" href="./img/favicon32x32.svg" sizes="32x32" type="svg+xml">
@@ -130,8 +131,7 @@
             </div>
             <div class="slider example__slider">
               <p class="slider__text" id="before" tabindex="0">было</p>
-              <div class="slider__scale">
-                <div class="slider__bar"></div>
+              <div class="slider__scale" id="slider">
               </div>
               <div class="slider__toggle" tabindex="0"><span class="visually-hidden">Изменить результат</span></div>
               <p class="slider__text" id="after" tabindex="0">стало</p>
@@ -186,6 +186,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/nouislider@14.7.0/distribute/nouislider.min.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXHfY_owjSPBg7q_D7D3baBwOG4AmMDNk&callback=initMap&libraries=&v=weekly"></script>
     <script src="js/main.min.js"></script>
   </body>
