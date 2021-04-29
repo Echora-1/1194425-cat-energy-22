@@ -64,4 +64,57 @@
       margin-top: 0;
     }
   }
+
+  &--mail,
+  &--phone {
+    position: relative;
+  }
+
+  &--mail::before,
+  &--phone::before {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    right: 4%;
+    top: 30%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: $desktop-width) {
+      right: 3%;
+    }
+  }
+
+  &--mail::before {
+    right: 4.3%;
+    mask-image: url("../img/icon_email.svg");
+
+    @media (min-width: $desktop-width) {
+      right: 3.3%;
+    }
+  }
+
+  &--phone::before {
+    mask-image: url("../img/icon_phone.svg");
+  }
+
+  &:focus-within {
+    &::before {
+      background-color: $apple;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-color: $tangerine;
+    }
+
+    &:focus-within {
+      &::before {
+        background-color: $tangerine;
+      }
+    }
+  }
 }
