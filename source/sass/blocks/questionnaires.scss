@@ -133,6 +133,7 @@
     color: $special_dark-grey-2;
     position: relative;
     vertical-align: middle;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -176,6 +177,7 @@
   &--checkbox {
     position: relative;
     color: $black;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -258,6 +260,10 @@
     margin-right: 6.8%;
     min-height: 52px;
     min-width: 568px;
+  }
+
+  &:focus {
+    outline: 1px auto $black;
   }
 }
 
