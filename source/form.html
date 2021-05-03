@@ -98,11 +98,10 @@
         </section>
         <section class="contact-details questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <div class="title-wrapper">
+            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+            <div class="title-wrapper" aria-hidden="true">
               <span class="title-wrapper__decor title-wrapper__decor--tablet"></span>
-              <legend>
-                <span class="title title--form">Контактные данные (владельца кота)</span>
-              </legend>
+              <span class="title title--form">Контактные данные (владельца кота)</span>
               <span class="title-wrapper__decor"></span>
             </div>
             <div class="container">
@@ -122,7 +121,7 @@
         <section class="comment questionnaires__item">
             <div class="title-wrapper">
               <span class="title-wrapper__decor title-wrapper__decor--tablet"></span>
-              <label class="title title--form title--form-comment" for="comment">Комментарий</label>
+              <label class="title title--form" for="comment">Комментарий</label>
               <span class="title-wrapper__decor"></span>
             </div>
             <div class="container comment__container">
@@ -131,11 +130,10 @@
         </section>
         <section class="additionally questionnaires__item">
           <fieldset class="questionnaires__fieldset">
-            <div class="title-wrapper">
+          <legend class="visually-hidden">Дополнительно</legend>
+            <div class="title-wrapper" aria-hidden="true">
               <span class="title-wrapper__decor title-wrapper__decor--tablet"></span>
-              <legend>
-                <span class="title title--form">Дополнительно</span>
-              </legend>
+              <span class="title title--form">Дополнительно</span>
               <span class="title-wrapper__decor"></span>
             </div>
             <div class="container additionally__container">
@@ -161,7 +159,7 @@
           </fieldset>
         </section>
         <div class="questionnaires__footer container">
-          <button class="button button--submit questionnaires__submit-button" type="submit" tabindex="0">Отправить заявку</button>
+          <button class="button button--submit questionnaires__submit-button" type="submit">Отправить заявку</button>
           <p class="questionnaires__footer-text">* — Обязательные поля</p>
         </div>
       </form>
