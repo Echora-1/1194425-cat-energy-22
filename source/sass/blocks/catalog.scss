@@ -90,42 +90,8 @@
   }
 
   &:nth-child(odd) {
-    @media (min-width: $tablet-width) {
-      & img {
-        margin-top: 28px;
-        margin-bottom: 21px;
-      }
-    }
-
     @media (min-width: $tablet-width) and (max-width: 1159px) {
       margin-right: 60px;
-    }
-
-    @media (min-width: $desktop-width) {
-      & img {
-        margin-top: 28px;
-        margin-bottom: 32px;
-      }
-    }
-  }
-
-  &:nth-child(even) img {
-    @media (min-width: $tablet-width) {
-      margin-bottom: 23px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 34px;
-    }
-  }
-
-  &:nth-child(2) img {
-    @media (min-width: $tablet-width) {
-      margin-bottom: 16px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 27px;
     }
   }
 
@@ -150,19 +116,11 @@
   &:nth-child(5) {
     @media (min-width: $tablet-width) {
       margin-bottom: 60px;
-
-      & img {
-        margin-bottom: 25px;
-      }
     }
 
     @media (min-width: $desktop-width) {
       margin-right: 76px;
       margin-left: 10px;
-
-      & img {
-        margin-bottom: 34px;
-      }
     }
   }
 
@@ -173,12 +131,6 @@
   }
 
   &:first-child {
-    @media (min-width: $tablet-width) {
-      & img {
-        margin-bottom: 23px;
-      }
-    }
-
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-right: 60px;
     }
@@ -186,10 +138,6 @@
     @media (min-width: $desktop-width) {
       margin-right: 76px;
       margin-left: 10px;
-
-      & img {
-        margin-bottom: 34px;
-      }
     }
   }
 

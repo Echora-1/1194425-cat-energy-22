@@ -3,13 +3,13 @@
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 19px 0 0 0;
+  margin: 18px 0 16px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted rgba($black, 0.4);
-    margin: 8px 0 0 0;
+    margin: 8px 0 16px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,10 +21,9 @@
   }
 }
 
-
 .slider__scale {
   margin: 21px 16px 0 20px;
-  padding: 0 6px;
+  padding: 0 5px;
   min-width: 84px;
   min-height: 14px;
   border: 1px solid $silver;
@@ -41,29 +40,5 @@
 
   @media (min-width: $desktop-width) {
     margin: 40px 20px 0 21px;
-  }
-}
-
-.slider__bar {
-  width: 35px;
-  height: 6px;
-  border-radius: 6px;
-  background: $apple;
-  left: 5px;
-  bottom: 49%;
-  transform: translate(0, 50%);
-  position: absolute;
-
-  @media (min-width: $tablet-width) {
-    left: 50.2%;
-    bottom: 50%;
-    transform: translate(-50%, 50%);
-    width: 34px;
-    height: 34px;
-    background: $white;
-    background-image: radial-gradient(circle closest-corner at 50% 50%, $apple 20%, transparent 0%);
-    border: 1px solid $silver;
-    border-radius: 50%;
-    filter: drop-shadow(0 1px 3px rgba($black, 0.16));
   }
 }

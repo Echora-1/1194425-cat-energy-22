@@ -13,6 +13,11 @@
 .offers__container {
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1450px) {
+    justify-content: center;
   }
 }
 
@@ -23,15 +28,6 @@
   min-height: 266px;
   padding: 20px 13px;
 
-  @media (min-width: $tablet-width) {
-    padding: 20px 38px 20px 52px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 40px 40px 20px 33px;
-    min-width: 570px;
-  }
-
   &:not(:last-child) {
     margin-bottom: 20px;
 
@@ -40,8 +36,13 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-      margin-right: 80px;
+      margin-right: 6.5%;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
     }
   }
 
@@ -52,10 +53,15 @@
     grid-template-columns: 60% 40%;
     column-gap: 18px;
     min-height: 372px;
+    padding: 20px 38px 20px 52px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 374px;
+    padding: 40px 40px 20px 33px;
+    min-width: 570px;
+    max-width: 45%;
+    margin-bottom: 30px;
   }
 }
 

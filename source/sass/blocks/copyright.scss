@@ -1,3 +1,9 @@
+.copyright {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__text {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -5,8 +11,10 @@
   color: $special_dark-grey;
   margin-right: auto;
 
-  &:active {
-    opacity: 0.3;
+  &:hover + .copyright__link {
+    & svg {
+      fill: $apple;
+    }
   }
 }
 
@@ -24,9 +32,5 @@
 
   &:hover svg {
     fill: $apple;
-  }
-
-  &:active svg {
-    opacity: 0.3;
   }
 }

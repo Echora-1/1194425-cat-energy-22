@@ -104,10 +104,10 @@
   background-image: url("../img/location.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/location@2x.png");
-    background-size: 320px 362px;
   }
 
   @media (min-width: $tablet-width) {
@@ -116,7 +116,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-tablet@2x.png");
-      background-size: 768px 400px;
     }
   }
 
@@ -126,7 +125,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-desktop@2x.png");
-      background-size: 1440px 400px;
     }
   }
 }

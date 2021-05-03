@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="./css/style.min.css" as="style">
     <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="apple-touch-icon" href="./img/favicon152x152.svg" sizes="any" type="svg+xml">
-    <link rel="icon" href="./img/favicon32x32.svg" sizes="32x32" type="svg+xml">
-    <link rel="icon" href="./img/favicon16x16.svg" sizes="16x16" type="svg+xml">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./img/favicon152x152.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="./img/favicon32x32.svg" sizes="32x32" type="image/svg+xml">
+    <link rel="icon" href="./img/favicon16x16.svg" sizes="16x16" type="image/svg+xml">
     <link rel="shortcut icon" href="favicon.ico">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="page-header page-header--form">
       <div class="container page-header__container">
-        <a class="logo page-header__logo" href="./index.html">
-          <svg class="logo__icon logo__icon--desktop" width="202" height="59">
+        <a class="logo page-header__logo" href="./index.html" aria-label="Cайт Кэт энерджи">
+          <svg role="img" class="logo__icon logo__icon--desktop" width="202" height="59">
             <use xlink:href="./img/sprite.svg#logo_desktop"></use>
           </svg>
-          <svg class="logo__icon logo__icon--tablet" width="174" height="52">
+          <svg role="img" class="logo__icon logo__icon--tablet" width="174" height="52">
             <use xlink:href="./img/sprite.svg#logo_tablet"></use>
           </svg>
-          <svg class="logo__icon" width="34" height="38">
+          <svg role="img" class="logo__icon" width="34" height="38">
             <use xlink:href="./img/sprite.svg#logo"></use>
           </svg>
         </a>
-        <a class="logo logo--text page-header__logo page-header__logo--text" href="./index.html">
-          <svg width="101" height="18">
+        <a class="logo logo--text page-header__logo page-header__logo--text" href="./index.html" aria-label="Кэт энерджи">
+          <svg role="img" width="101" height="18">
             <use xlink:href="./img/sprite.svg#text-logo"></use>
           </svg>
         </a>
@@ -57,12 +57,12 @@
         </div>
         <ul class="catalog__list  catalog__list-container container">
           <li class="product catalog__item">
-            <a class="product__image" href="">
+            <a class="product__image product__image--unique-margin" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-1-tablet.webp 1x, ./img/catalog-1-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-1-desktop.webp 1x, ./img/catalog-1-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-1-tablet.png 1x, ./img/catalog-1-tablet@2x.png 2x">
-                <img src="./img/catalog-1-desktop.png" srcset="./img/catalog-1-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-1-desktop.png" srcset="./img/catalog-1-desktop@2x.png 2x" alt="Изображение Cat Energy pro 500 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -74,12 +74,12 @@
             <a class="button product__button" href="">заказать</a>
           </li>
           <li class="product catalog__item">
-            <a class="product__image" href="">
+            <a class="product__image product__image--size-m product__image--custom-size" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-2-tablet.webp 1x, ./img/catalog-2-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-2-desktop.webp 1x, ./img/catalog-2-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-2-tablet.png 1x, ./img/catalog-2-tablet@2x.png 2x">
-                <img src="./img/catalog-2-desktop.png" srcset="./img/catalog-2-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-2-desktop.png" srcset="./img/catalog-2-desktop@2x.png 2x" alt="Изображение Cat Energy pro 1000 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -96,7 +96,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-3-tablet.webp 1x, ./img/catalog-3-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-3-desktop.webp 1x, ./img/catalog-3-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-3-tablet.png 1x, ./img/catalog-3-tablet@2x.png 2x">
-                <img src="./img/catalog-3-desktop.png" srcset="./img/catalog-3-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-3-desktop.png" srcset="./img/catalog-3-desktop@2x.png 2x" alt="Изображение Cat Energy pro 500 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -108,12 +108,12 @@
             <a class="button product__button" href="">заказать</a>
           </li>
           <li class="product catalog__item">
-            <a class="product__image" href="">
+            <a class="product__image product__image--size-m" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-4-tablet.webp 1x, ./img/catalog-4-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-4-desktop.webp 1x, ./img/catalog-4-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-4-tablet.png 1x, ./img/catalog-4-tablet@2x.png 2x">
-                <img src="./img/catalog-4-desktop.png" srcset="./img/catalog-4-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-4-desktop.png" srcset="./img/catalog-4-desktop@2x.png 2x" alt="Изображение Cat Energy pro 1000 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -125,12 +125,12 @@
             <a class="button product__button" href="">заказать</a>
           </li>
           <li class="product catalog__item">
-            <a class="product__image" href="">
+            <a class="product__image product__image--unique-margin" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-5-tablet.webp 1x, ./img/catalog-5-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-5-desktop.webp 1x, ./img/catalog-5-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-5-tablet.png 1x, ./img/catalog-5-tablet@2x.png 2x">
-                <img src="./img/catalog-5-desktop.png" srcset="./img/catalog-5-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-5-desktop.png" srcset="./img/catalog-5-desktop@2x.png 2x" alt="Изображение Cat Energy slim 500 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -142,12 +142,12 @@
             <a class="button product__button" href="">заказать</a>
           </li>
           <li class="product catalog__item">
-            <a class="product__image" href="">
+            <a class="product__image product__image--size-m" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-6-tablet.webp 1x, ./img/catalog-6-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-6-desktop.webp 1x, ./img/catalog-6-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-6-tablet.png 1x, ./img/catalog-6-tablet@2x.png 2x">
-                <img src="./img/catalog-6-desktop.png" srcset="./img/catalog-6-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-6-desktop.png" srcset="./img/catalog-6-desktop@2x.png 2x" alt="Изображение Cat Energy slim 1000 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -164,7 +164,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog-7-tablet.webp 1x, ./img/catalog-7-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/catalog-7-desktop.webp 1x, ./img/catalog-7-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/catalog-7-tablet.png 1x, ./img/catalog-7-tablet@2x.png 2x">
-                <img src="./img/catalog-7-desktop.png" srcset="./img/catalog-7-desktop@2x.png 2x" alt="">
+                <img src="./img/catalog-7-desktop.png" srcset="./img/catalog-7-desktop@2x.png 2x" alt="Изображение Cat Energy slim 500 г">
               </picture>
             </a>
             <div class="product__data-wrapper">
@@ -176,7 +176,7 @@
             <a class="button product__button" href="">заказать</a>
           </li>
           <li class="product product--show-all catalog__item catalog__item--show-all">
-            <a class="product__image product__image--show-all" href="">
+            <a class="product__image product__image--show-all" href="" aria-label="Показать ещё товаров">
               <svg class="product__icon-plus product__icon-plus--tablet" width="60" height="60">
                 <use xlink:href="./img/sprite.svg#plus_tablet"></use>
               </svg>
@@ -218,7 +218,7 @@
             </li>
           </ul>
           <div class="gift">
-            <svg class="gift__icon" width="78" height="80">
+            <svg aria-hidden="true" class="gift__icon" width="78" height="80">
               <use xlink:href="./img/sprite.svg#icon_gift"></use>
             </svg>
             <p class="gift__text">Закажите все<br> и получите чехол для кота в подарок!</p>
@@ -237,35 +237,32 @@
         <div class="address__map" id="map"></div>
       </div>
       <div class="page-footer__wrapper container">
-        <a class="logo logo--text page-footer__logo" href="./index.html">
-          <svg width="128" height="24">
+        <a class="logo logo--text page-footer__logo" href="./index.html" aria-label="Cайт Кэт энерджи">
+          <svg role="img" width="128" height="24">
             <use xlink:href="./img/sprite.svg#text-logo"></use>
           </svg>
         </a>
         <div class="social page-footer__social">
-          <a class="social__link social__link" href="">
-            <span class="visually-hidden">Мы в ВКонтакте</span>
-            <svg class="social__icon" width="23" height="16">
+          <a class="social__link social__link" href="" aria-label="Мы в ВКонтакте">
+            <svg role="img" class="social__icon" width="23" height="16">
               <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
             </svg>
           </a>
-          <a class="social__link social__link--instagram" href="">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="social__icon" width="16" height="16">
+          <a class="social__link social__link--instagram" href="" aria-label="Мы в Фейсбуке">
+            <svg role="img" class="social__icon" width="16" height="16">
               <use xlink:href="./img/sprite.svg#icon_instagram"></use>
             </svg>
           </a>
-          <a class="social__link social__link--facebook " href="">
-            <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="social__icon" width="22" height="22">
+          <a class="social__link social__link--facebook " href="" aria-label="Мы в Инстаграме">
+            <svg role="img" class="social__icon" width="22" height="22">
               <use xlink:href="./img/sprite.svg#icon_facebook"></use>
             </svg>
           </a>
         </div>
         <div class="copyright page-footer__copyright">
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Cайт HTML Academy">
+            <svg role="img" width="27" height="34">
               <use xlink:href="./img/sprite.svg#academy-logo"></use>
             </svg>
           </a>

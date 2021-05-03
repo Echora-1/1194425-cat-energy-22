@@ -1,0 +1,53 @@
+.noUi-horizontal {
+  position: relative;
+  width: 428px;
+  height: 6px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 84px;
+    height: 14px;
+  }
+
+  & .noUi-handle {
+    top: -14px;
+    right: -18px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.noUi-connect {
+  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    height: 6px;
+    background-color: $apple;
+    top: 3px;
+    border-radius: 6px;
+  }
+}
+
+.noUi-handle {
+  background: $white;
+  background-image: radial-gradient(circle closest-corner at 50% 50%, $apple 20%, transparent 0%);
+  border: 1px solid $silver;
+  border-radius: 50%;
+  filter: drop-shadow(0 1px 3px rgba($black, 0.16));
+  cursor: pointer;
+  position: absolute;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+
+.noUi-touch-area {
+  display: none;
+}

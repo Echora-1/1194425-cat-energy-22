@@ -49,14 +49,16 @@
 .page-footer__social {
   display: flex;
   flex-wrap: wrap;
-  min-height: 63px;
+  min-height: 64px;
   justify-content: center;
   align-items: center;
   width: 100%;
   border-top: 1px solid $silver-2;
+  border-bottom: 1px solid $silver-2;
   margin: 0;
 
   @media (min-width: $tablet-width) {
+    min-height: 63px;
     border: none;
     width: 33%;
     align-items: start;
@@ -75,7 +77,6 @@
   align-items: center;
   width: 100%;
   min-height: 59px;
-  border-top: 1px solid $silver-2;
   padding: 10px 0 0 0;
 
   @media (min-width: $tablet-width) {

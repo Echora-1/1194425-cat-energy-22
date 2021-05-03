@@ -1,9 +1,20 @@
 'use strict'
 
+/* global noUiSlider:readonly */
+const START_WIDTH =  50;
 const headerContainer= document.querySelector('.page-header__container');
 const menu = document.querySelector('.main-nav');
 const menuOpenButton = document.querySelector('.menu-opener');
 const menuWrapper = document.querySelector('.main-nav__wrapper');
+const buttonBefore = document.querySelector('#before');
+const buttonAfter = document.querySelector('#after');
+const sliderImage = document.querySelector('.example__image-wrapper');
+const slider = document.querySelector('#slider');
+const formInputElements = document.querySelectorAll('.questionnaires__input');
+const submitButtonElement = document.querySelector('.questionnaires__submit-button');
+let currentWidth = START_WIDTH;
+
+// Menu
 
 const jsWork = () => {
   menuOpenButton.classList.remove('menu-opener--no-js');
@@ -39,9 +50,10 @@ if(menuOpenButton) {
   menuOpenButton.addEventListener('click', handleMenuOpening)
 }
 
+// Map
 
 function initMap() {
-  const map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.querySelector('#map'), {
     center: new google.maps.LatLng(59.9387165, 30.3208587),
     zoom: window.matchMedia('(max-width: 1439px)').matches ? 15 : 16,
     disableDefaultUI: true,
@@ -55,4 +67,98 @@ function initMap() {
       scaledSize: window.matchMedia('(max-width: 767px)').matches ? new google.maps.Size(57, 53) : new google.maps.Size(113, 106)
     }
   });
+}
+
+// Slider
+
+if(sliderImage) {
+  sliderImage.style.widt = START_WIDTH;
+
+  const handleAfterPressed = () => {
+    if(currentWidth > 0) {
+      currentWidth -= 1;
+      slider.noUiSlider.set(currentWidth.toFixed(2));
+      sliderImage.style.width = `${currentWidth}%`;
+    }
+  }
+
+  const handleBeforePressed = () => {
+    if(currentWidth < 100) {
+      currentWidth += 1;
+      slider.noUiSlider.set(currentWidth.toFixed(2));
+      sliderImage.style.width = `${currentWidth}%`;
+    }
+  }
+
+  buttonAfter.addEventListener('click', handleAfterPressed)
+  buttonBefore.addEventListener('click', handleBeforePressed)
+
+  noUiSlider.create(slider, {
+    range: {
+      min: 0,
+      max: 100,
+    },
+    start: 50,
+    step: 1,
+    connect: 'lower',
+  });
+
+  slider.noUiSlider.on('update', (_, handle, unencoded) => {
+    currentWidth = unencoded[handle];
+    sliderImage.style.width =`${currentWidth}%`;
+  });
+}
+
+// Form validation
+const addContactDetailsItemErrorClass = (element) => {
+  if(element.id == "mail" || element.id == "phone") {
+    element.parentNode.classList.add('contact-details__item--error')
+  }
+}
+
+const removeContactDetailsItemErrorClass = (element) => {
+  if(element.id == "mail" || element.id == "phone") {
+    element.parentNode.classList.remove('contact-details__item--error')
+  }
+}
+
+const handleValidation = (element) => {
+  if(element.validity.patternMismatch) {
+    element.classList.add('questionnaires__input--error');
+    element.setCustomValidity('Введите данные в указанном формате.');
+    addContactDetailsItemErrorClass(element);
+  }
+  else {
+    element.setCustomValidity('');
+    element.classList.remove('questionnaires__input--error');
+    removeContactDetailsItemErrorClass(element);
+  }
+  element.reportValidity();
+};
+
+formInputElements.forEach((input) => {
+    if(input.id != 'age' && input.id != 'comment') {
+      input.addEventListener('input', () => handleValidation(input))
+    }
+  }
+)
+
+const onInputCheck = () => {
+  formInputElements.forEach((input) => {
+    if(input.checkValidity() === false) {
+      input.classList.add('questionnaires__input--error');
+      addContactDetailsItemErrorClass(input);
+      setTimeout(
+        () => {
+          input.classList.remove('questionnaires__input--error')
+          removeContactDetailsItemErrorClass(input);
+        },
+        2000
+      )
+    }
+  })
+}
+
+if(submitButtonElement) {
+  submitButtonElement.addEventListener('click', onInputCheck);
 }
